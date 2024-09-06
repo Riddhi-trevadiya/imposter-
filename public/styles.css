@@ -1,0 +1,166 @@
+body {
+    background-color: #000000; /* Dark purple background */
+    background-image: linear-gradient(160deg, #1e052c, #302b63, #24243e);
+    color: white;
+    font-family: 'Poppins', sans-serif;
+    height: 100vh;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+
+
+#nameContainer, #waitingContainer, #gameContainer {
+    background: rgb(0, 0, 0); /* Slightly transparent background */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(11, 1, 16, 0.226); /* Shadow for better visibility */
+    text-align: center;
+    max-width: 400px;
+    margin: 100px auto; /* Center the container */
+}
+
+#nameContainer {
+    background: linear-gradient(135deg, #7491db, #5d2691); /* Gradient background */
+}
+
+#waitingContainer {
+    background: linear-gradient(135deg, #7491db, #5d2691); /* Gradient background */
+}
+
+#gameContainer {
+    display: flex;
+    width: 80%;
+    max-width: 1200px;
+    height: 80%;
+    margin-top: 3%;
+}
+
+#chatContainer {
+    display: flex;
+    flex: 1;
+    height: 100%;
+    gap: 20px; /* Space between chat and voting sections */
+}
+
+#chatSection, #voteSection {
+    background: rgba(9, 1, 13, 0.1); /* Slightly transparent background */
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(5, 0, 11, 0.2); /* Shadow for better visibility */
+}
+
+#chatSection {
+    flex: 2;
+    display: flex;
+    flex-direction: column;
+}
+
+#voteSection {
+    flex: 1;
+}
+
+input, button {
+    margin: 10px 0;
+    padding: 10px;
+    border-radius: 5px;
+    border: none;
+    font-size: 1em;
+}
+
+input[type="text"] {
+    width: calc(100% - 22px); /* Adjust width for padding */
+}
+
+button {
+    background-color: #ffffff;
+    color: #6625ab;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+button:hover {
+    background-color: #6a11cb;
+    color: white;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+li {
+    background: rgba(21, 4, 35, 0.1);
+    border-radius: 5px;
+    padding: 10px;
+    margin-bottom: 10px;
+}
+
+#messages, #playerListForVote {
+    height: 200px;
+    overflow-y: auto;
+    margin: 10px 0;
+}
+
+#voteContainer {
+    display: none; /* Hide vote container initially */
+}
+
+#wordDisplay {
+    font-size: 24px; /* Adjust the font size as needed */
+    font-weight: bold; /* Make the text bold if desired */
+    color: white; /* Ensure the text color matches your theme */
+}
+
+#resultContainer {
+    background-color: #302b63; /* Dark purple theme */
+    color: white; /* White text */
+    padding: 20px;
+    border-radius: 10px;
+    border: 2px solid white; /* White border */
+    text-align: center;
+    width: 80%; /* Adjust width as needed */
+    margin: 20px auto; /* Center the container */
+    display: none; /* Initially hidden */
+}
+
+#resultContainer h2 {
+    font-size: 28px; /* Larger heading */
+    margin-bottom: 10px;
+}
+
+#resultContainer p {
+    font-size: 18px; /* Readable text size */
+    margin-bottom: 10px;
+}
+
+#resultContainer ul {
+    list-style-type: none; /* Remove bullet points */
+    padding: 0;
+    font-size: 18px; /* Readable text size */
+    text-align: left; /* Left-align text */
+}
+
+#resultContainer ul li {
+    padding: 5px 0; /* Space between list items */
+    border-bottom: 1px solid white; /* Separator between votes */
+}
+
+#nextRoundButton {
+    background-color: #443c88; /* Light purple button */
+    color: white;
+    font-size: 18px;
+    padding: 10px 20px;
+    margin-top: 20px;
+    border: 2px solid white;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#nextRoundButton:hover {
+    background-color: #6a11cb; /* Change color on hover */
+}

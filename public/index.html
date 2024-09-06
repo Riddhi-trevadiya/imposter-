@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Imposter</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body >
+    <div id="nameContainer">
+        <h1>Welcome to The Imposter</h1>
+        <input id="playerNameInput" type="text" placeholder="Enter your name">
+        <button id="createRoomButton">Create Room</button>
+        <button id="joinRoomButton">Join Room</button>
+        <input id="roomCodeInput" type="text" placeholder="Enter room code" style="display: none;">
+    </div>
+
+<div id="waitingContainer" style="display: none;">
+        <h2>Waiting for players...</h2>
+        <div id="roomCodeDisplay"></div>
+        <ul id="playersList"></ul>
+        <button id="startGameButton" style="display: none;">Start Game</button>
+    </div>
+
+        <ul id="playersList"></ul>
+        <button id="startGameButton" style="display: none;">Start Game</button>
+    </div>
+
+    <div id="gameContainer" style="display: none;">
+        <div id="chatContainer">
+            <div id="chatSection">
+                <h1>The Imposter</h1>
+                <div id="playerNameDisplay"></div>
+                <div id="wordDisplay"></div>
+                <input id="sentenceInput" type="text" placeholder="Enter your sentence">
+                <div class="d-grid gap-2 d-md-block">
+                    <button id="sendButton">Send</button>
+                    <button id="callVoteButton">Call Vote</button>
+                </div>
+                <ul id="messages"></ul>
+            </div>
+            <div id="voteSection">
+                <div id="voteContainer" style="display: none;">
+                    <h2>Vote for the Imposter</h2>
+                    <ul id="playerListForVote"></ul>
+                </div>
+                <div id="votesDisplay"></div>
+                <div id="resultContainer" style="display: none;"></div>
+            </div>
+        </div>
+    </div>
+
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
+
+
+
